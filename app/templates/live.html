@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🎥 Live Feed - RePark</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 mb-4">
+    <a class="navbar-brand" href="/">🚗 RePark</a>
+    <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="/">📤 Upload</a></li>
+        <li class="nav-item"><a class="nav-link" href="/dashboard">📊 Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link active" href="/live">🎥 Live</a></li>
+        <li class="nav-item"><a class="nav-link" href="/logout">🚪 Logout</a></li>
+    </ul>
+</nav>
+
+<div class="container text-center">
+    <h2 class="mb-3">🎥 Live Camera Feed</h2>
+    <img src="{{ url_for('video_feed') }}" class="img-fluid border shadow-sm mb-3" alt="Live Camera Feed">
+
+    <!-- ✅ Capture Button -->
+    <form method="POST" action="{{ url_for('capture') }}">
+        <button type="submit" class="btn btn-danger btn-lg">📸 Capture & OCR</button>
+    </form>
+</div>
+
+</body>
+</html>

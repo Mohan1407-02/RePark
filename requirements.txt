@@ -1,0 +1,8 @@
+Flask
+easyocr
+opencv-python
+twilio
+python-dotenv
+Pillow
+gunicorn
+opencv-python-headless
